@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_book_app/screens/details_screen.dart';
 import '../data/recipes_data.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,12 @@ class HomeScreen extends StatelessWidget {
               leading: Image.asset(recipe.imagePath),
               title: Text(recipe.name),
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(recipe: sampleRecipes[index]),
+                  ),
+                );
               },
             );
           },
