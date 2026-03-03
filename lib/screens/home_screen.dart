@@ -17,17 +17,20 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final recipe = sampleRecipes[index];
 
-            return ListTile(
-              leading: Image.asset(recipe.imagePath),
-              title: Text(recipe.name),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailsScreen(recipe: sampleRecipes[index]),
-                  ),
-                );
-              },
+            return Card(
+              child: ListTile(
+                leading: Image.asset(recipe.imagePath, width: 56, fit: BoxFit.cover),
+                title: Text(recipe.name),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(recipe: sampleRecipes[index]),
+                    ),
+                  );
+                },
+              ),
             );
           },
         ),

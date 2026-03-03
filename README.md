@@ -1,16 +1,24 @@
-# recipe_book_app
+# Recipe Book App
 
-A new Flutter project.
+A multi-screen Flutter app for browsing recipes. Built for CSC 4360 — Mobile App Development (Spring 2026).
+
+## Features
+
+- Scrollable home screen listing all recipes
+- Detail screen with image, ingredients, and instructions
+- Navigation with data passing via `Navigator.push()`
+- Image assets for each recipe
+
+## Project Structure
+
+- `lib/models/recipe.dart` — Recipe data model
+- `lib/data/recipes_data.dart` — Sample recipe list
+- `lib/screens/home_screen.dart` — Home screen with recipe list
+- `lib/screens/details_screen.dart` — Detail view for a selected recipe
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter run
+```
